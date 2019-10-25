@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:paddingTop="80dp">
+
+    <LinearLayout
+        android:id="@+id/masterWard"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Something"
+                android:textSize="26sp"
+                android:layout_marginLeft="32dp"
+                android:textColor="#3d3d3d"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Something"
+                android:textSize="18sp"
+                android:layout_marginLeft="32dp"
+                android:textColor="#3d3d3d"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:onClick="showInformation"
+                android:id="@+id/btnOpen"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:textColor="#FFFFFF"
+                android:background="#7190FF"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Details"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+        android:id="@+id/myContent"
+        android:layout_below="@+id/masterWard"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ael_expanded="false"
+        app:ael_duration="300"
+        app:ael_interpolator="accelerate"
+        app:ael_orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPar"
+            android:lineSpacingExtra="3dp"
+            android:textColor="#3d3d3d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="sfhs sdhfgh sfh sgh sgh sgs ghg hg  sd dh dshsdf hdf hsdfh dhsdfh ndjfnb nldfn nflnl dsngnn f;n ;n n;ndsf;kn ;sdfn;n ;dfnlkn ldfnlnldfs ngklns d"/>
+
+        <TextView
+            android:id="@+id/tvPar2"
+            android:layout_below="@+id/tvPar"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="3dp"
+            android:textColor="#3d3d3d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="sfhs sdhfgh sfh sgh sgh sgs ghg hg  sd dh dshsdf hdf hsdfh dhsdfh ndjfnb nldfn nflnl dsngnn f;n ;n n;ndsf;kn ;sdfn;n ;dfnlkn ldfnlnldfs ngklns d"/>
+    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+</RelativeLayout>
